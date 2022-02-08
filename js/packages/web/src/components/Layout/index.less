@@ -17,11 +17,22 @@
   display: flex;
   flex-direction: row;
   margin-right: 15px;
+
+  a {
+    button {
+      span {
+        font-family: 'Teko';
+        font-size: 24px;
+        letter-spacing: 2px;
+      }
+    }
+  }
 }
 
 #desktop-navbar {
   display: flex;
   width: 100%;
+  background-color: #000;
   justify-content: space-between;
   @media (max-width: @screen-sm-min) {
     display: none;
@@ -39,7 +50,9 @@ section.ant-layout {
 }
 
 section#main-layout.ant-layout {
-  background-color: @bg-color !important;
+  background-image: url('/my_nfts_hero.png') !important;
+  background-position: center center !important;
+  background-size: cover !important;
   min-height: 100vh;
 
   span#static-header-gradient {

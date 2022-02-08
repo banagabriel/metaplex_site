@@ -214,13 +214,13 @@ h1 {
   > .ant-steps-item-container
   > .ant-steps-item-content
   > .ant-steps-item-title {
-  color: hsla(0, 0%, 100%, 0.85);
+  color: #000;
 }
 .ant-steps-item-wait
   > .ant-steps-item-container
   > .ant-steps-item-content
   > .ant-steps-item-title {
-  color: hsla(0, 0%, 100%, 0.45);
+  color: #000;
 }
 .ant-steps-item-wait
   .ant-steps-item-icon
@@ -247,20 +247,21 @@ h1 {
   font-size: 16px;
   line-height: 16px;
   background-color: transparent !important;
-  color: white;
+  color: #fff;
+  border-radius: 8px;
   &.secondary-btn {
     color: @black-100;
-    background: @metaplex-primary-color !important;
-    border-color: @metaplex-primary-color !important;
+    background: #d8439c !important;
+    border: none;
     box-shadow: 0px 0px 24px rgba(26, 26, 26, 0.12);
     border-radius: 8px;
     width: fit-content;
 
     &:hover,
     &:focus {
-      background: transparent !important;
-      border-color: @metaplex-primary-color !important;
-      color: @metaplex-primary-color !important;
+      background: #d8439c !important;
+      border: none;
+      color: #fff !important;
     }
 
     &:disabled,
@@ -292,6 +293,7 @@ model-viewer {
 }
 
 .creator-base-page {
+  color: #000;
   @media (max-width: @screen-sm-min) {
     padding: 15px;
   }
@@ -329,6 +331,21 @@ model-viewer {
 }
 
 .ant-tabs-nav-list {
+  span {
+    color: #000 !important;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  div {
+    border: 1px solid #000;
+    border-radius: 8px;
+    color: #000 !important;
+
+    div {
+      color: #000;
+      border: none;
+    }
+  }
   align-items: center;
 }
 
