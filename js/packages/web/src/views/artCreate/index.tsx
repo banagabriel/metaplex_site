@@ -667,7 +667,7 @@ const InfoStep = (props: {
             <span className="field-title">Title</span>
             <Input
               autoFocus
-              className="input"
+              className="input white-input"
               placeholder="Max 50 characters"
               maxLength={50}
               allowClear
@@ -683,7 +683,7 @@ const InfoStep = (props: {
           <label className="action-field">
             <span className="field-title">Symbol</span>
             <Input
-              className="input"
+              className="input white-input"
               placeholder="Max 10 characters"
               maxLength={10}
               allowClear
@@ -700,7 +700,7 @@ const InfoStep = (props: {
           <label className="action-field">
             <span className="field-title">Description</span>
             <Input.TextArea
-              className="input textarea"
+              className="input textarea white-input"
               placeholder="Max 500 characters"
               maxLength={500}
               value={props.attributes.description}
@@ -743,7 +743,7 @@ const InfoStep = (props: {
                         fieldKey={[fieldKey, 'trait_type']}
                         hasFeedback
                       >
-                        <Input placeholder="trait_type (Optional)" />
+                        <Input placeholder="trait_type (Optional)" className="white-input"/>
                       </Form.Item>
                       <Form.Item
                         name={[name, 'value']}
@@ -751,14 +751,14 @@ const InfoStep = (props: {
                         rules={[{ required: true, message: 'Missing value' }]}
                         hasFeedback
                       >
-                        <Input placeholder="value" />
+                        <Input placeholder="value" className="white-input"/>
                       </Form.Item>
                       <Form.Item
                         name={[name, 'display_type']}
                         fieldKey={[fieldKey, 'display_type']}
                         hasFeedback
                       >
-                        <Input placeholder="display_type (Optional)" />
+                        <Input placeholder="display_type (Optional)" className="white-input"/>
                       </Form.Item>
                       <MinusCircleOutlined onClick={() => remove(name)} />
                     </Space>
