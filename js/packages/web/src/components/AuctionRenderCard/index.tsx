@@ -52,7 +52,7 @@ export const AuctionRenderCard = (props: AuctionCard) => {
         </div>
       </div>
       <div className="card-bid-info">
-        <span className={'text-uppercase info-message'}>{status}</span>
+        <span className={'text-uppercase info-message'}>PRICE</span>
         <AmountLabel
           containerStyle={{ flexDirection: 'row' }}
           title={status}

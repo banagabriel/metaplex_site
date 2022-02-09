@@ -2053,7 +2053,10 @@ const WaitingStep = (props: {
         alignItems: 'center',
       }}
     >
-      <Progress type="circle" percent={progress} />
+      <Progress strokeColor={{
+        '0%': '#F1BBDC',
+        '100%': '#D53497',
+      }} type="circle" percent={progress} />
       <div className="waiting-title">
         Your creation is being listed with Metaplex...
       </div>
