@@ -51,7 +51,7 @@ export const MetaplexMenu = () => {
     return (
       <>
         <Modal
-          title={<img src={'/metaplex-logo.svg'} />}
+          title={<img src={'/spaceheads-horizontal-logo.svg'} />}
           visible={isModalVisible}
           footer={null}
           className={'modal-box'}
@@ -110,7 +110,7 @@ export const MetaplexMenu = () => {
 export const LogoLink = () => {
   return (
     <Link to={`/`}>
-      <img src={'/metaplex-logo.svg'} />
+      <img className="logo" src={'/spaceheads-horizontal-logo.svg'} />
     </Link>
   );
 };
@@ -123,10 +123,9 @@ export const AppBar = () => {
       <div id="desktop-navbar">
         <div className="app-left">
           <LogoLink />
-          &nbsp;&nbsp;&nbsp;
-          <MetaplexMenu />
         </div>
         <div className="app-right">
+          <MetaplexMenu />
           {!connected && (
             <HowToBuyModal buttonClassName="modal-button-default" />
           )}
