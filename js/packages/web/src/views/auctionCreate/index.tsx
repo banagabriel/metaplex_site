@@ -691,7 +691,7 @@ export const AuctionCreateView = () => {
               {stepsByCategory[attributes.category]
                 .filter(_ => !!_[0])
                 .map((step, idx) => (
-                  <Step title={step[0]} key={idx} />
+                  <Step className="left-step" title={step[0]} key={idx} />
                 ))}
             </Steps>
           </Col>
@@ -699,7 +699,7 @@ export const AuctionCreateView = () => {
         <Col span={24} {...(stepsVisible ? { md: 20 } : { md: 24 })}>
           {stepsByCategory[attributes.category][step][1]}
           {0 < step && stepsVisible && (
-            <div style={{ margin: 'auto', width: 'fit-content' }}>
+            <div className="continue-button" style={{ margin: 'auto', width: 'fit-content' }}>
               <Button onClick={() => gotoNextStep(step - 1)}>Back</Button>
             </div>
           )}
@@ -847,7 +847,7 @@ const InstantSaleStep = ({
 
   return (
     <>
-      <Row className="call-to-action" style={{ marginBottom: 0 }}>
+      <Row className="call-to-action section-title" style={{ marginBottom: 0 }}>
         <h2>Select which item to sell:</h2>
       </Row>
 
@@ -956,7 +956,7 @@ const InstantSaleStep = ({
           onClick={() => {
             confirm();
           }}
-          className="action-btn"
+          className="action-btn continue-button"
         >
           Continue
         </Button>

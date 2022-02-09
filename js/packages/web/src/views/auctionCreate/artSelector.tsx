@@ -127,7 +127,7 @@ export const ArtSelector = (props: ArtSelectorProps) => {
             type="primary"
             size="large"
             onClick={confirm}
-            className="action-btn"
+            className="action-btn continue-button"
           >
             Confirm
           </Button>
