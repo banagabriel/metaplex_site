@@ -383,7 +383,7 @@ const UploadStep = (props: {
 
   return (
     <>
-      <Row className="call-to-action">
+      <Row className="call-to-action section-title">
         <h2>Now, let's upload your creation</h2>
         <p style={{ fontSize: '1.2rem' }}>
           Your file will be uploaded to the decentralized web via Arweave.

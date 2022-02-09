@@ -808,7 +808,7 @@ export const AuctionCard = ({
           <Button
             type="primary"
             size="large"
-            className="action-btn"
+            className="action-btn connect-wallet"
             onClick={connect}
             style={{ marginTop: 20 }}
           >

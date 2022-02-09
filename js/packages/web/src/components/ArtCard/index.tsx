@@ -82,7 +82,7 @@ export const ArtCard = (props: ArtCardProps) => {
           X
         </Button>
       )}
-      <div className="art-card__header">
+      <div className="art-card__header header-color">
         <MetaAvatar creators={creators} size={32} />
         <div className="edition-badge">{badge}</div>
       </div>

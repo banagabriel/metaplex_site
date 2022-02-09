@@ -10,7 +10,7 @@ export const ArtistCard = ({ artist }: { artist: Artist }) => {
   return (
     <Card
       hoverable={true}
-      className={`artist-card`}
+      className={`artist-card artist-card-without-shadow`}
       cover={
         <div className="header-container">
           {artist.background ? <img src={artist.background} /> : null}
@@ -20,7 +20,7 @@ export const ArtistCard = ({ artist }: { artist: Artist }) => {
     >
       <>
         <MetaAvatar creators={[artist]} size={64} />
-        <div className="artist-card-name">
+        <div className="artist-card-name artist-name-badge">
           {artist.name || shortenAddress(artist.address || '')}
         </div>
         <div className="artist-card-description">{artist.about}</div>

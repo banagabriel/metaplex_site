@@ -84,7 +84,16 @@
     }
   }
 }
-
+.connect-wallet {
+  &:hover {
+    span {
+      color: #000 !important;
+    }
+  }
+  span {
+    color: #fff !important;
+  }
+}
 .ant-modal-body {
   border-radius: 12px 12px 0 0;
   background: #212121;
@@ -116,7 +125,7 @@
       &:hover, &:focus {
       background: transparent;
       border-color: #FFFFFF;
-      color: #FFFFFF;
+      color: @grey-70;
     }
   }
 }
@@ -129,7 +138,7 @@
   font-style: normal;
   font-weight: 600;
   font-size: 36px;
-  color: #FFFFFF;
+  color: @grey-70;
   line-height: 44px;
   // letter-spacing: 3px;
 }

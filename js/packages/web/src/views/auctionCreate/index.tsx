@@ -715,7 +715,7 @@ const CategoryStep = (props: {
   const { width } = useWindowDimensions();
   return (
     <>
-      <Row className="call-to-action">
+      <Row className="call-to-action section-title">
         <h2>List an item</h2>
         <p>
           First time listing on Metaplex? <a>Read our sellers' guide.</a>
@@ -725,7 +725,7 @@ const CategoryStep = (props: {
         <Col>
           <Row>
             <Button
-              className="type-btn"
+              className="type-btn card"
               size="large"
               onClick={() => props.confirm(AuctionCategory.InstantSale)}
             >
@@ -739,7 +739,7 @@ const CategoryStep = (props: {
           </Row>
           <Row>
             <Button
-              className="type-btn"
+              className="type-btn card"
               size="large"
               onClick={() => props.confirm(AuctionCategory.Limited)}
             >
@@ -753,7 +753,7 @@ const CategoryStep = (props: {
           </Row>
           <Row>
             <Button
-              className="type-btn"
+              className="type-btn card"
               size="large"
               onClick={() => props.confirm(AuctionCategory.Open)}
             >
@@ -767,7 +767,7 @@ const CategoryStep = (props: {
           </Row>
           <Row>
             <Button
-              className="type-btn"
+              className="type-btn card"
               size="large"
               onClick={() => props.confirm(AuctionCategory.Tiered)}
             >
@@ -782,7 +782,7 @@ const CategoryStep = (props: {
           </Row>
           <Row>
             <Button
-              className="type-btn"
+              className="type-btn card"
               size="large"
               onClick={() => props.confirm(AuctionCategory.Single)}
             >
@@ -877,16 +877,16 @@ const InstantSaleStep = ({
                   })
                 }
               >
-                <Option value={InstantSaleType.Single}>
+                <Option className="option" value={InstantSaleType.Single}>
                   Sell unique token
                 </Option>
                 {copiesEnabled && (
-                  <Option value={InstantSaleType.Limited}>
+                  <Option className="option" value={InstantSaleType.Limited}>
                     Sell limited number of copies
                   </Option>
                 )}
                 {!copiesEnabled && isMasterEdition && (
-                  <Option value={InstantSaleType.Open}>
+                  <Option className="option" value={InstantSaleType.Open}>
                     Sell unlimited number of copies
                   </Option>
                 )}
@@ -898,7 +898,7 @@ const InstantSaleStep = ({
                   </span>
                   <Input
                     autoFocus
-                    className="input"
+                    className="input white-input"
                     placeholder="Enter number of copies sold"
                     allowClear
                     onChange={info =>
@@ -934,7 +934,7 @@ const InstantSaleStep = ({
               type="number"
               min={0}
               autoFocus
-              className="input"
+              className="input white-input"
               placeholder="Price"
               prefix="◎"
               suffix={mintInfo?.symbol || "CUSTOM"}
@@ -1045,7 +1045,7 @@ const CopiesStep = (props: {
               </span>
               <Input
                 autoFocus
-                className="input"
+                className="input white-input"
                 placeholder="Enter number of copies sold"
                 allowClear
                 onChange={info =>
@@ -1066,7 +1066,7 @@ const CopiesStep = (props: {
           onClick={() => {
             props.confirm();
           }}
-          className="action-btn"
+          className="action-btn continue-button"
         >
           Continue to Terms
         </Button>
@@ -1213,7 +1213,7 @@ const PriceAuction = (props: {
                 type="number"
                 min={0}
                 autoFocus
-                className="input"
+                className="input white-input"
                 placeholder="Price"
                 prefix="◎"
                 suffix={props.attributes.quoteMintInfoExtended? props.attributes.quoteMintInfoExtended.symbol
@@ -1235,7 +1235,7 @@ const PriceAuction = (props: {
             <Input
               type="number"
               min={0}
-              className="input"
+              className="input white-input"
               placeholder={`Tick size in ${props.attributes.quoteMintInfoExtended? props.attributes.quoteMintInfoExtended.symbol
                 : props.attributes.quoteMintAddress == WRAPPED_SOL_MINT.toBase58()? "SOL": "your custom currency"}`}
               prefix="◎"
@@ -1256,7 +1256,7 @@ const PriceAuction = (props: {
           type="primary"
           size="large"
           onClick={props.confirm}
-          className="action-btn"
+          className="action-btn continue-button"
         >
           Continue
         </Button>
@@ -1417,7 +1417,7 @@ const InitialPhaseStep = (props: {
           type="primary"
           size="large"
           onClick={props.confirm}
-          className="action-btn"
+          className="action-btn continue-button"
         >
           Continue
         </Button>
@@ -1462,7 +1462,7 @@ const EndingPhaseAuction = (props: {
               }
               autoFocus
               type="number"
-              className="input"
+              className="input white-input"
               placeholder="Set the auction duration"
               onChange={info =>
                 props.setAttributes({
@@ -1497,7 +1497,7 @@ const EndingPhaseAuction = (props: {
                 </Select>
               }
               type="number"
-              className="input"
+              className="input white-input"
               placeholder="Set the gap time"
               onChange={info =>
                 props.setAttributes({
@@ -1517,7 +1517,7 @@ const EndingPhaseAuction = (props: {
             </span>
             <Input
               type="number"
-              className="input"
+              className="input white-input"
               placeholder="Percentage"
               suffix="%"
               onChange={info =>
@@ -1535,7 +1535,7 @@ const EndingPhaseAuction = (props: {
           type="primary"
           size="large"
           onClick={props.confirm}
-          className="action-btn"
+          className="action-btn continue-button"
         >
           Continue
         </Button>
@@ -1787,7 +1787,7 @@ const TierTableStep = (props: {
                   tiers: newTiers,
                 });
               }}
-              className="action-btn"
+              className="action-btn continue-button"
             >
               <PlusCircleOutlined />
             </Button>
@@ -1818,7 +1818,7 @@ const TierTableStep = (props: {
           type="primary"
           size="large"
           onClick={props.confirm}
-          className="action-btn"
+          className="action-btn continue-button"
         >
           Continue to Review
         </Button>
@@ -1872,7 +1872,7 @@ const ParticipationStep = (props: {
               type="number"
               min={0}
               autoFocus
-              className="input"
+              className="input white-input"
               placeholder="Fixed Price"
               prefix="◎"
               suffix={props.attributes.quoteMintInfoExtended? props.attributes.quoteMintInfoExtended.symbol
@@ -1892,7 +1892,7 @@ const ParticipationStep = (props: {
           type="primary"
           size="large"
           onClick={props.confirm}
-          className="action-btn"
+          className="action-btn continue-button"
         >
           Continue to Review
         </Button>
@@ -2007,7 +2007,7 @@ const ReviewStep = (props: {
               handleConfirm()
             }
           }}
-          className="action-btn"
+          className="action-btn continue-button"
         >
           {props.attributes.category === AuctionCategory.InstantSale
             ? 'List for Sale'
@@ -2053,7 +2053,10 @@ const WaitingStep = (props: {
         alignItems: 'center',
       }}
     >
-      <Progress type="circle" percent={progress} />
+      <Progress strokeColor={{
+        '0%': '#F1BBDC',
+        '100%': '#D53497',
+      }} type="circle" percent={progress} />
       <div className="waiting-title">
         Your creation is being listed with Metaplex...
       </div>

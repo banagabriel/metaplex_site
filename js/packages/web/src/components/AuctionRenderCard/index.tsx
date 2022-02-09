@@ -24,7 +24,7 @@ export const AuctionRenderCard = (props: AuctionCard) => {
   const { status, amount } = useAuctionStatus(auctionView);
 
   const card = (
-    <Card hoverable={true} className={`auction-render-card`} bordered={false}>
+    <Card hoverable={true} className={`auction-render-card card-auction`} bordered={false}>
       <div className={'card-art-info'}>
         <div className="auction-gray-wrapper">
           <div className={'card-artist-info'}>
@@ -52,7 +52,7 @@ export const AuctionRenderCard = (props: AuctionCard) => {
         </div>
       </div>
       <div className="card-bid-info">
-        <span className={'text-uppercase info-message'}>{status}</span>
+        <span className={'text-uppercase info-message'}>PRICE</span>
         <AmountLabel
           containerStyle={{ flexDirection: 'row' }}
           title={status}

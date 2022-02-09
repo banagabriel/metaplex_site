@@ -224,7 +224,7 @@ export const AuctionView = () => {
             <List grid={{ column: 4 }}>
               {attributes.map((attribute, index) => (
                 <List.Item key={`${attribute.value}-${index}`}>
-                  <Card title={attribute.trait_type}>{attribute.value}</Card>
+                  <Card className="attribute-card" title={attribute.trait_type}>{attribute.value}</Card>
                 </List.Item>
               ))}
             </List>

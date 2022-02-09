@@ -61,15 +61,6 @@ export const AmountLabel = (props: IAmountLabel) => {
           prefix={customPrefix || <TokenCircle iconSize={iconSize} iconFile={tokenInfo?.logoURI==""? undefined: tokenInfo?.logoURI}/>}
         />
       )}
-      {displayUSD && (
-        <div className="usd">
-          {PriceNaN === false ? (
-            priceUSD? formatUSD.format(priceUSD): "$N/A"
-          ) : (
-            <div className="placebid">{ended ? 'N/A' : 'Place Bid'}</div>
-          )}
-        </div>
-      )}
     </div>
   );
 };

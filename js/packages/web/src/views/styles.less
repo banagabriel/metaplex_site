@@ -3,7 +3,84 @@
 * {
   font-family: 'GraphikWeb';
 }
+*::selection {
+  color: #fff;
+  background: #d8439c
+}
 
+.white-input {
+  input, span {
+    color: #fff !important;
+  }
+
+  span.ant-select-selection-item {
+    color: #000 !important;
+  }
+}
+
+.ant-select-dropdown{
+  .ant-select-item-option-content{
+    color: #fff;
+  }
+}
+.white-refresh {
+  span {
+    color: #fff !important;
+  }
+}
+
+.card {
+  background-color: #d8439c !important;
+  background: none;
+
+  &:hover {
+    background: #ad2477 !important;
+  }
+  div {
+    color: #fff;
+  }
+}
+
+.my-items {
+  .artist-art {
+    filter: none;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+
+    .ant-card-meta-detail {
+      div {
+        color: #000;
+      }
+    }
+  }
+}
+
+.section-title {
+  h2 {
+    color: #000;
+  }
+}
+.about-artist {
+  h2,
+  div.info-header,
+  div.info-content{
+    color: #000;
+  }
+
+  .artist-art {
+    filter: none;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+
+    .ant-card-meta-detail {
+      div {
+        color: #000;
+      }
+    }
+  }
+}
 .ant-layout-content {
   color: #000 !important;
   // div {
@@ -17,7 +94,7 @@
 
     .ant-btn {
       span {
-        color: #fff;
+        color: #000;
       }
     }
   }
@@ -178,7 +255,7 @@
   padding: 20px 10px;
 
   /* button/primary/default */
-  // background: linear-gradient(180deg, #768bf9 0%, #5870ee 100%);
+  background: linear-gradient(180deg, #DC56A6 0%, #D9459E 100%);
   border-radius: 8px;
   height: 58px;
 
@@ -306,7 +383,7 @@ h2 {
 
 .selected-card {
   border-width: 3px;
-  border-color: #5870ee !important;
+  border-color: #ee58ee !important;
   border-style: solid;
 }
 
@@ -331,13 +408,13 @@ h2 {
 .waiting-title {
   font-weight: 600;
   font-size: 2rem;
-  color: #ffffff;
+  color: rgba(17, 15, 15);
   text-align: center;
 }
 
 .waiting-subtitle {
   font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(17, 15, 15, 0.7);
   margin-top: 20px;
 }
 
