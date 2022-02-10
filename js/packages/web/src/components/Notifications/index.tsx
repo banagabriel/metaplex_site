@@ -278,7 +278,7 @@ export function useSettlementAuctions({
           <span>
             One of your auctions ended and it has monies that can be claimed.
             For more detail,{' '}
-            <Link to={`/auction/${auctionKey}/billing`}>click here.</Link>
+            <Link to={`/metaplex_site/auction/${auctionKey}/billing`}>click here.</Link>
           </span>
         ),
         action: async () => {
@@ -486,7 +486,7 @@ export function Notifications() {
           {whitelistedCreatorsByCreator[m.info.updateAuthority]?.info?.name ||
             m.pubkey}{' '}
           wants you to approve that you helped create their art{' '}
-          <Link to={`/art/${m.pubkey}`}>here.</Link>
+          <Link to={`/metaplex_site/art/${m.pubkey}`}>here.</Link>
         </span>
       ),
       action: async () => {

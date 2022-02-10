@@ -47,7 +47,7 @@ const UserActions = (props: { mobile?: boolean; onClick?: any }) => {
         (props.mobile ? (
           <div className="actions-buttons actions-user">
             {canCreate && (
-              <Link to={`/art/create`}>
+              <Link to={`/metaplex_site/art/create`}>
                 <Button
                   onClick={() => {
                     props.onClick ? props.onClick() : null;
@@ -58,7 +58,7 @@ const UserActions = (props: { mobile?: boolean; onClick?: any }) => {
                 </Button>
               </Link>
             )}
-            <Link to={`/auction/create/0`}>
+            <Link to={`/metaplex_site/auction/create/0`}>
               <Button
                 onClick={() => {
                   props.onClick ? props.onClick() : null;
@@ -77,7 +77,7 @@ const UserActions = (props: { mobile?: boolean; onClick?: any }) => {
           >
             {canCreate && (
               <>
-                <Link to={`/art/create`} style={{ width: '100%' }}>
+                <Link to={`/metaplex_site/art/create`} style={{ width: '100%' }}>
                   <Button className="metaplex-button-default" style={btnStyle}>
                     Create
                   </Button>
@@ -85,7 +85,7 @@ const UserActions = (props: { mobile?: boolean; onClick?: any }) => {
                 &nbsp;&nbsp;
               </>
             )}
-            <Link to={`/auction/create/0`} style={{ width: '100%' }}>
+            <Link to={`/metaplex_site/auction/create/0`} style={{ width: '100%' }}>
               <Button className="metaplex-button-default" style={btnStyle}>
                 Sell
               </Button>

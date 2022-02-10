@@ -39,7 +39,7 @@ const About = () => {
 
   const create = (
     <Stack spacing={1}>
-      <Link to={`/entanglement/create`}>
+      <Link to={`/metaplex_site/entanglement/create`}>
         CREATION
       </Link>
 
@@ -53,7 +53,7 @@ const About = () => {
 
   const show = (
     <Stack spacing={1}>
-      <Link to={`/entanglement/show`}>
+      <Link to={`/metaplex_site/entanglement/show`}>
         SHOW
       </Link>
 
@@ -65,7 +65,7 @@ const About = () => {
 
   const swap = (
     <Stack spacing={1}>
-      <Link to={`/entanglement/swap`}>
+      <Link to={`/metaplex_site/entanglement/swap`}>
         SWAP
       </Link>
 
@@ -78,7 +78,7 @@ const About = () => {
 
   const search = (
     <Stack spacing={1}>
-      <Link to={`/entanglement/search`}>
+      <Link to={`/metaplex_site/entanglement/search`}>
         SEARCH
       </Link>
 
@@ -91,7 +91,7 @@ const About = () => {
 
   const wizard = (
     <Stack spacing={1}>
-      <Link to={`/entanglement/wizard`}>
+      <Link to={`/metaplex_site/entanglement/wizard`}>
         WIZARD
       </Link>
 

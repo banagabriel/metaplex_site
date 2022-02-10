@@ -25,26 +25,26 @@ export default class MetaplexDocument extends Document {
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/favicon.png"
+            href="/metaplex_site/favicon.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="96x96"
-            href="/favicon.png"
+            href="/metaplex_site/favicon.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/favicon.png"
+            href="/metaplex_site/favicon.png"
           />
           <meta name="theme-color" content="#000000" />
           <meta name="description" content="Space Heads Marketplace" />
-          <link rel="manifest" href="/manifest.json" />
+          <link rel="manifest" href="/metaplex_site/manifest.json" />
           <link
             rel="stylesheet"
-            href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            href="/metaplex_site//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
             integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
             crossOrigin="anonymous"
           />

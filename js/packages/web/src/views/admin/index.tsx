@@ -101,7 +101,7 @@ export const AdminView = () => {
       ) : (
         <>
           <p>Store is not initialized</p>
-          <Link to={`/`}>Go to initialize</Link>
+          <Link to={`/metaplex_site/`}>Go to initialize</Link>
         </>
       )}
     </>

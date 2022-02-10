@@ -493,7 +493,7 @@ export const Create = () => {
               description: (
                 <span>
                   Could not parse uploaded file.{WHITESPACE}
-                  <HyperLink href="#/">
+                  <HyperLink href="/metaplex_site#/">
                     Does it follow the JSON scheme?
                   </HyperLink>
                 </span>

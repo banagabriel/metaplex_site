@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://metaplex.com">
+  <a href="/metaplex_sitehttps://metaplex.com">
     <img alt="Metaplex" src="js/packages/web/public/metaplex-logo.svg" style="background: black; padding: 10px" width="250" />
   </a>
 </p>

@@ -116,7 +116,7 @@ export const StaticPage = (props: {
         ? liveAuctions.map((m, idx) => {
             const id = m.auction.pubkey;
             return (
-              <Link to={`/auction/${id}`} key={idx}>
+              <Link to={`/metaplex_site/auction/${id}`} key={idx}>
                 <AuctionRenderCard key={id} auctionView={m} />
               </Link>
             );
