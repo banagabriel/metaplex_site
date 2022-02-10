@@ -150,15 +150,14 @@ export const ArtCreateView = () => {
               style={{
                 width: 'fit-content',
                 margin: '0 auto 30px auto',
-                overflowX: 'auto',
                 maxWidth: '100%',
               }}
             >
-              <Step title="Category" />
-              <Step title="Upload" />
-              <Step title="Info" />
-              <Step title="Royalties" />
-              <Step title="Launch" />
+              <Step className="left-step" title="Category" />
+              <Step className="left-step" title="Upload" />
+              <Step className="left-step" title="Info" />
+              <Step className="left-step" title="Royalties" />
+              <Step className="left-step" title="Launch" />
             </Steps>
           </Col>
         )}
@@ -219,7 +218,7 @@ export const ArtCreateView = () => {
             />
           )}
           {0 < step && step < 5 && (
-            <div style={{ margin: 'auto', width: 'fit-content' }}>
+            <div className="continue-button" style={{ margin: 'auto', width: 'fit-content' }}>
               <Button onClick={() => gotoStep(step - 1)}>Back</Button>
             </div>
           )}
@@ -238,7 +237,7 @@ const CategoryStep = (props: {
   const { width } = useWindowDimensions();
   return (
     <>
-      <Row className="call-to-action">
+      <Row className="call-to-action category-step">
         <h2>Create a new item</h2>
         <p>
           First time creating on Metaplex?{' '}
@@ -251,7 +250,7 @@ const CategoryStep = (props: {
         <Col>
           <Row>
             <Button
-              className="type-btn"
+              className="type-btn card"
               size="large"
               onClick={() => props.confirm(MetadataCategory.Image)}
             >
@@ -263,7 +262,7 @@ const CategoryStep = (props: {
           </Row>
           <Row>
             <Button
-              className="type-btn"
+              className="type-btn card"
               size="large"
               onClick={() => props.confirm(MetadataCategory.Video)}
             >
@@ -275,7 +274,7 @@ const CategoryStep = (props: {
           </Row>
           <Row>
             <Button
-              className="type-btn"
+              className="type-btn card"
               size="large"
               onClick={() => props.confirm(MetadataCategory.Audio)}
             >
@@ -287,7 +286,7 @@ const CategoryStep = (props: {
           </Row>
           <Row>
             <Button
-              className="type-btn"
+              className="type-btn card"
               size="large"
               onClick={() => props.confirm(MetadataCategory.VR)}
             >
@@ -299,7 +298,7 @@ const CategoryStep = (props: {
           </Row>
           <Row>
             <Button
-              className="type-btn"
+              className="type-btn card"
               size="large"
               onClick={() => props.confirm(MetadataCategory.HTML)}
             >
@@ -384,7 +383,7 @@ const UploadStep = (props: {
 
   return (
     <>
-      <Row className="call-to-action">
+      <Row className="call-to-action section-title">
         <h2>Now, let's upload your creation</h2>
         <p style={{ fontSize: '1.2rem' }}>
           Your file will be uploaded to the decentralized web via Arweave.
@@ -560,7 +559,7 @@ const UploadStep = (props: {
             props.confirm();
           }}
           style={{ marginTop: 24 }}
-          className="action-btn"
+          className="action-btn continue-button"
         >
           Continue to Mint
         </Button>
@@ -641,14 +640,14 @@ const InfoStep = (props: {
   }, [creators]);
   return (
     <>
-      <Row className="call-to-action">
+      <Row className="call-to-action section-title">
         <h2>Describe your item</h2>
         <p>
           Provide detailed description of your creative process to engage with
           your audience.
         </p>
       </Row>
-      <Row className="content-action" justify="space-around">
+      <Row className="content-action" justify="space-between">
         <Col>
           {props.attributes.image && (
             <ArtCard
@@ -663,12 +662,12 @@ const InfoStep = (props: {
             />
           )}
         </Col>
-        <Col className="section" style={{ minWidth: 300 }}>
+        <Col className="section" style={{ minWidth: 600, maxWidth: 600 }}>
           <label className="action-field">
             <span className="field-title">Title</span>
             <Input
               autoFocus
-              className="input"
+              className="input white-input"
               placeholder="Max 50 characters"
               maxLength={50}
               allowClear
@@ -684,7 +683,7 @@ const InfoStep = (props: {
           <label className="action-field">
             <span className="field-title">Symbol</span>
             <Input
-              className="input"
+              className="input white-input"
               placeholder="Max 10 characters"
               maxLength={10}
               allowClear
@@ -701,7 +700,7 @@ const InfoStep = (props: {
           <label className="action-field">
             <span className="field-title">Description</span>
             <Input.TextArea
-              className="input textarea"
+              className="input textarea white-input"
               placeholder="Max 500 characters"
               maxLength={500}
               value={props.attributes.description}
@@ -744,7 +743,7 @@ const InfoStep = (props: {
                         fieldKey={[fieldKey, 'trait_type']}
                         hasFeedback
                       >
-                        <Input placeholder="trait_type (Optional)" />
+                        <Input placeholder="trait_type (Optional)" className="white-input"/>
                       </Form.Item>
                       <Form.Item
                         name={[name, 'value']}
@@ -752,14 +751,14 @@ const InfoStep = (props: {
                         rules={[{ required: true, message: 'Missing value' }]}
                         hasFeedback
                       >
-                        <Input placeholder="value" />
+                        <Input placeholder="value" className="white-input"/>
                       </Form.Item>
                       <Form.Item
                         name={[name, 'display_type']}
                         fieldKey={[fieldKey, 'display_type']}
                         hasFeedback
                       >
-                        <Input placeholder="display_type (Optional)" />
+                        <Input placeholder="display_type (Optional)" className="white-input"/>
                       </Form.Item>
                       <MinusCircleOutlined onClick={() => remove(name)} />
                     </Space>
@@ -767,6 +766,7 @@ const InfoStep = (props: {
                   <Form.Item>
                     <Button
                       type="dashed"
+                      className="add-attribute"
                       onClick={() => add()}
                       block
                       icon={<PlusOutlined />}
@@ -804,7 +804,7 @@ const InfoStep = (props: {
               props.confirm();
             });
           }}
-          className="action-btn"
+          className="action-btn continue-button"
         >
           Continue to royalties
         </Button>
@@ -931,7 +931,7 @@ const RoyaltiesStep = (props: {
 
   return (
     <>
-      <Row className="call-to-action" style={{ marginBottom: 20 }}>
+      <Row className="call-to-action section-title" style={{ marginBottom: 20 }}>
         <h2>Set royalties and creator splits</h2>
         <p>
           Royalties ensure that you continue to get compensated for your work
@@ -997,7 +997,7 @@ const RoyaltiesStep = (props: {
           </span>
           <span
             style={{
-              color: 'rgba(255, 255, 255, 0.7)',
+              color: '#000',
               verticalAlign: 'middle',
               lineHeight: 1,
             }}
@@ -1066,7 +1066,7 @@ const RoyaltiesStep = (props: {
             });
             props.confirm();
           }}
-          className="action-btn"
+          className="action-btn continue-button"
         >
           Continue to review
         </Button>
@@ -1118,14 +1118,14 @@ const LaunchStep = (props: {
 
   return (
     <>
-      <Row className="call-to-action">
+      <Row className="call-to-action  section-title">
         <h2>Launch your creation</h2>
         <p>
           Provide detailed description of your creative process to engage with
           your audience.
         </p>
       </Row>
-      <Row className="content-action" justify="space-around">
+      <Row className="content-action">
         <Col>
           {props.attributes.image && (
             <ArtCard
@@ -1136,7 +1136,7 @@ const LaunchStep = (props: {
               symbol={props.attributes.symbol}
               small={true}
               artView={props.files[1]?.type === 'unknown'}
-              className="art-create-card"
+              className="art-create-card launch-card"
             />
           )}
         </Col>
@@ -1166,7 +1166,7 @@ const LaunchStep = (props: {
           type="primary"
           size="large"
           onClick={props.confirm}
-          className="action-btn"
+          className="action-btn continue-button"
         >
           Pay with SOL
         </Button>
@@ -1174,7 +1174,7 @@ const LaunchStep = (props: {
           disabled={true}
           size="large"
           onClick={props.confirm}
-          className="action-btn"
+          className="action-btn continue-button"
         >
           Pay with Credit Card
         </Button>
@@ -1217,50 +1217,50 @@ const WaitingStep = (props: {
       <Card>
         <Steps direction="vertical" current={props.step}>
           <Step
-            className={'white-description'}
+            className={'white-description white-text'}
             title="Minting"
             description="Starting Mint Process"
             icon={setIconForStep(props.step, 0)}
           />
           <Step
-            className={'white-description'}
+            className={'white-description white-text'}
             title="Preparing Assets"
             icon={setIconForStep(props.step, 1)}
           />
           <Step
-            className={'white-description'}
+            className={'white-description white-text'}
             title="Signing Metadata Transaction"
             description="Approve the transaction from your wallet"
             icon={setIconForStep(props.step, 2)}
           />
           <Step
-            className={'white-description'}
+            className={'white-description white-text'}
             title="Sending Transaction to Solana"
             description="This will take a few seconds."
             icon={setIconForStep(props.step, 3)}
           />
           <Step
-            className={'white-description'}
+            className={'white-description white-text'}
             title="Waiting for Initial Confirmation"
             icon={setIconForStep(props.step, 4)}
           />
           <Step
-            className={'white-description'}
+            className={'white-description white-text'}
             title="Waiting for Final Confirmation"
             icon={setIconForStep(props.step, 5)}
           />
           <Step
-            className={'white-description'}
+            className={'white-description white-text'}
             title="Uploading to Arweave"
             icon={setIconForStep(props.step, 6)}
           />
           <Step
-            className={'white-description'}
+            className={'white-description white-text'}
             title="Updating Metadata"
             icon={setIconForStep(props.step, 7)}
           />
           <Step
-            className={'white-description'}
+            className={'white-description white-text'}
             title="Signing Token Transaction"
             description="Approve the final transaction from your wallet"
             icon={setIconForStep(props.step, 8)}

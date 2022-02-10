@@ -43,6 +43,7 @@ const ItemCard = ({ item }: { item: Item }): ReactElement => {
   return (
     <Link to={`/art/${pubkey}`}>
       <ArtCard
+        className="artist-art"
         pubkey={pubkey}
         preview={false}
         height={ART_CARD_SIZE}

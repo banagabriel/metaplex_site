@@ -19,6 +19,7 @@ export const ArtistView = () => {
               <Link to={`/art/${id}`} key={idx}>
                 <ArtCard
                   key={id}
+                  className="artist-art"
                   pubkey={m.pubkey}
                   preview={false}
                   artView={true}
@@ -37,7 +38,7 @@ export const ArtistView = () => {
         <Row
           style={{ margin: '0 30px', textAlign: 'left', fontSize: '1.4rem' }}
         >
-          <Col span={24}>
+          <Col className="about-artist" span={24}>
             <h2>
               {/* <MetaAvatar creators={creator ? [creator] : []} size={100} /> */}
               {creator?.info.name || creator?.info.address}

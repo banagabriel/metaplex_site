@@ -223,7 +223,7 @@ export const ArtView = () => {
             <Divider />
             {art.creators?.find(c => !c.verified) && unverified}
             <br />
-            <div className="info-header">ABOUT THE CREATION</div>
+            <div className="info-header about-creation">ABOUT THE CREATION</div>
             <div className="info-content">{description}</div>
             <br />
             {/*
@@ -236,10 +236,10 @@ export const ArtView = () => {
               <>
                 <Divider />
                 <br />
-                <div className="info-header">Attributes</div>
+                <div className="info-header about-creation">Attributes</div>
                 <List size="large" grid={{ column: 4 }}>
                   {attributes.map(attribute => (
-                    <List.Item key={attribute.trait_type}>
+                    <List.Item key={attribute.trait_type} className="attributes-creation">
                       <Card title={attribute.trait_type}>
                         {attribute.value}
                       </Card>

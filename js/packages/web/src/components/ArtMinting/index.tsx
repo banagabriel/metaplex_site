@@ -144,7 +144,7 @@ export const ArtMinting = ({ id, onMint }: ArtMintingProps) => {
           <Button
             type="primary"
             size="large"
-            className="action-btn"
+            className="action-btn continue-button"
             style={{ marginTop: 20 }}
             onClick={() => setShowMintModal(true)}
           >
@@ -162,7 +162,7 @@ export const ArtMinting = ({ id, onMint }: ArtMintingProps) => {
             cancelButtonProps={{ disabled: isLoading }}
             onOk={mint}
             onCancel={() => setShowMintModal(false)}
-            className="art-minting-modal"
+            className="art-minting-modal mint-modal"
           >
             <Form.Item
               style={{

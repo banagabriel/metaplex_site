@@ -46,7 +46,7 @@ export const ArtworksView = () => {
   const isDataLoading = isLoading || isFetching;
 
   const artworkGrid = (
-    <div className="artwork-grid">
+    <div className="artwork-grid my-items">
       {isDataLoading && [...Array(10)].map((_, idx) => <CardLoader key={idx} />)}
       {!isDataLoading &&
         userItems.map(item => {
@@ -63,12 +63,12 @@ export const ArtworksView = () => {
 
   const refreshButton = connected && storeIndexer.length !== 0 && (
     <Dropdown.Button
-      className="refresh-button padding0"
+      className="refresh-button padding0 white-refresh"
       onClick={() => pullItemsPage(userAccounts)}
       icon={<DownOutlined />}
       overlayClassName="refresh-overlay"
       overlay={
-        <Menu className="gray-dropdown">
+        <Menu className="gray-dropdown white-refresh">
           <Menu.Item onClick={() => pullAllMetadata()}>
             Load All Metadata
           </Menu.Item>
