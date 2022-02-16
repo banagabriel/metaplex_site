@@ -27,7 +27,7 @@ module.exports = withPlugins(plugins, {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  basePath: '/metaplex_site',
+
   env: {
     NEXT_PUBLIC_STORE_OWNER_ADDRESS:
       process.env.STORE_OWNER_ADDRESS ||

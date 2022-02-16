@@ -25,19 +25,19 @@ export default class MetaplexDocument extends Document {
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/metaplex_site/favicon.png"
+            href="/favicon.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="96x96"
-            href="/metaplex_site/favicon.png"
+            href="/favicon.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/metaplex_site/favicon.png"
+            href="/favicon.png"
           />
           <meta name="theme-color" content="#000000" />
           <meta name="description" content="Space Heads Marketplace" />

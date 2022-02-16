@@ -57,14 +57,14 @@ const About = () => {
       <div>
       Gumdrop (originally pioneered for token airdrops by{" "}
       <HyperLink
-        href="_sitehttps://github.com/Uniswap/merkle-distributor"
+        href="https://github.com/Uniswap/merkle-distributor"
         underline="none"
       >
         Uniswap
       </HyperLink>
       {" "}and ported to Solana by{WHITESPACE}
       <HyperLink
-        href="_sitehttps://github.com/saber-hq/merkle-distributor"
+        href="https://github.com/saber-hq/merkle-distributor"
         underline="none"
       >
         Saber

@@ -395,7 +395,6 @@ export const Cog = () => {
                 width: '100%',
                 marginBottom: 10,
               }}
-              className="network-font"
             >
               {ENDPOINTS.map(({ name }) => (
                 <Select.Option value={name} key={endpoint.name}>
@@ -415,7 +414,7 @@ export const Cog = () => {
         }
       >
         <Button className="wallet-key">
-          <img src="/metaplex_site/cog.svg" />
+          <img src="/cog.svg" />
         </Button>
       </Popover>
     </div>
