@@ -884,7 +884,7 @@ export const AuctionCard = ({
           }}
         >
           Your sale has been ended please view your NFTs in{' '}
-          <Link to="/metaplex_site/artworks">My Items</Link>.
+          <Link to="/artworks">My Items</Link>.
         </p>
         <Button
           onClick={() => setShowEndingBidModal(false)}
@@ -913,7 +913,7 @@ export const AuctionCard = ({
           }}
         >
           Your {auctionView.isInstantSale ? 'purchase' : 'bid'} has been
-          redeemed please view your NFTs in <Link to="/metaplex_site/artworks">My Items</Link>
+          redeemed please view your NFTs in <Link to="/artworks">My Items</Link>
           .
         </p>
         <Button

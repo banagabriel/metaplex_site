@@ -24,7 +24,7 @@ const ItemCard = ({ item }: { item: Item }): ReactElement => {
       : `provingProcessKey=${provingProcessKey}`;
 
     return (
-      <Link to={`/metaplex_site/pack/${pubkey}?${search}`}>
+      <Link to={`/pack/${pubkey}?${search}`}>
         <PackCard
           name={item.info.name}
           voucherMetadata={voucherMetadataKey}
@@ -41,7 +41,7 @@ const ItemCard = ({ item }: { item: Item }): ReactElement => {
   const pubkey = isMetadata(item) ? item.pubkey : item.metadata.pubkey;
 
   return (
-    <Link to={`/metaplex_site/art/${pubkey}`}>
+    <Link to={`/art/${pubkey}`}>
       <ArtCard
         className="artist-art"
         pubkey={pubkey}

@@ -241,7 +241,7 @@ const CategoryStep = (props: {
         <h2>Create a new item</h2>
         <p>
           First time creating on Metaplex?{' '}
-          <a href="/metaplex_sitehttps://docs.metaplex.com/create-store/sell" target="_blank" rel="noreferrer">
+          <a href="https://docs.metaplex.com/create-store/sell" target="_blank" rel="noreferrer">
             Read our creators’ guide.
           </a>
         </p>
@@ -1010,7 +1010,7 @@ const RoyaltiesStep = (props: {
           onCancel={() => setShowCreatorsModal(false)}
         >
           <label className="action-field" style={{ width: '100%' }}>
-            <span className="field-title">Creators</span>
+            <span className="field-title white-input">Creators</span>
             <UserSearch setCreators={setCreators} />
           </label>
         </MetaplexModal>

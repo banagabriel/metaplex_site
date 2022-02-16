@@ -16,7 +16,7 @@ export const ArtistView = () => {
         ? artwork.map((m, idx) => {
             const id = m.pubkey;
             return (
-              <Link to={`/metaplex_site/art/${id}`} key={idx}>
+              <Link to={`/art/${id}`} key={idx}>
                 <ArtCard
                   key={id}
                   className="artist-art"

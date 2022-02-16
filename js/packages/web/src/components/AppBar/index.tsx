@@ -16,13 +16,13 @@ import { MobileNavbar } from '../MobileNavbar';
 
 const getDefaultLinkActions = (connected: boolean) => {
   return [
-    <Link to={`/metaplex_site/`} key={'explore'}>
+    <Link to={`/`} key={'explore'}>
       <Button className="app-btn">Explore</Button>
     </Link>,
-    <Link to={`/metaplex_site/artworks`} key={'artwork'}>
+    <Link to={`/artworks`} key={'artwork'}>
       <Button className="app-btn">{connected ? 'My Items' : 'Artwork'}</Button>
     </Link>,
-    <Link to={`/metaplex_site/artists`} key={'artists'}>
+    <Link to={`/artists`} key={'artists'}>
       <Button className="app-btn">Creators</Button>
     </Link>,
   ];
@@ -51,7 +51,7 @@ export const MetaplexMenu = () => {
     return (
       <>
         <Modal
-          title={<img src={'/spaceheads-horizontal-logo.svg'} />}
+          title={<img src={'/metaplex_site/spaceheads-horizontal-logo.svg'} />}
           visible={isModalVisible}
           footer={null}
           className={'modal-box'}
@@ -109,8 +109,8 @@ export const MetaplexMenu = () => {
 
 export const LogoLink = () => {
   return (
-    <Link to={`/metaplex_site/`}>
-      <img className="logo" src={'/spaceheads-horizontal-logo.svg'} />
+    <Link to={`/`}>
+      <img className="logo" src={'/metaplex_site/spaceheads-horizontal-logo.svg'} />
     </Link>
   );
 };

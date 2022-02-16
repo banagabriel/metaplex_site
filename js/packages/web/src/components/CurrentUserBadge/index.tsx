@@ -47,7 +47,7 @@ const UserActions = (props: { mobile?: boolean; onClick?: any }) => {
         (props.mobile ? (
           <div className="actions-buttons actions-user">
             {canCreate && (
-              <Link to={`/metaplex_site/art/create`}>
+              <Link to={`/art/create`}>
                 <Button
                   onClick={() => {
                     props.onClick ? props.onClick() : null;
@@ -58,7 +58,7 @@ const UserActions = (props: { mobile?: boolean; onClick?: any }) => {
                 </Button>
               </Link>
             )}
-            <Link to={`/metaplex_site/auction/create/0`}>
+            <Link to={`/auction/create/0`}>
               <Button
                 onClick={() => {
                   props.onClick ? props.onClick() : null;
@@ -77,7 +77,7 @@ const UserActions = (props: { mobile?: boolean; onClick?: any }) => {
           >
             {canCreate && (
               <>
-                <Link to={`/metaplex_site/art/create`} style={{ width: '100%' }}>
+                <Link to={`/art/create`} style={{ width: '100%' }}>
                   <Button className="metaplex-button-default" style={btnStyle}>
                     Create
                   </Button>
@@ -85,7 +85,7 @@ const UserActions = (props: { mobile?: boolean; onClick?: any }) => {
                 &nbsp;&nbsp;
               </>
             )}
-            <Link to={`/metaplex_site/auction/create/0`} style={{ width: '100%' }}>
+            <Link to={`/auction/create/0`} style={{ width: '100%' }}>
               <Button className="metaplex-button-default" style={btnStyle}>
                 Sell
               </Button>
@@ -395,6 +395,7 @@ export const Cog = () => {
                 width: '100%',
                 marginBottom: 10,
               }}
+              className="network-font"
             >
               {ENDPOINTS.map(({ name }) => (
                 <Select.Option value={name} key={endpoint.name}>
@@ -414,7 +415,7 @@ export const Cog = () => {
         }
       >
         <Button className="wallet-key">
-          <img src="/cog.svg" />
+          <img src="/metaplex_site/cog.svg" />
         </Button>
       </Popover>
     </div>

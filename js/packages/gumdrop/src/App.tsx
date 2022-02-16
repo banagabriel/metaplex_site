@@ -38,7 +38,7 @@ const About = () => {
       In the Solana ecosystem, the cost of token airdrops is currently largely
       due to rent costs being{WHITESPACE}
       <HyperLink
-        href="/metaplex_sitehttps://docs.solana.com/implemented-proposals/rent"
+        href="https://docs.solana.com/implemented-proposals/rent"
         underline="none"
       >
         &quot;fixed at the genesis&quot;
@@ -57,14 +57,14 @@ const About = () => {
       <div>
       Gumdrop (originally pioneered for token airdrops by{" "}
       <HyperLink
-        href="/metaplex_sitehttps://github.com/Uniswap/merkle-distributor"
+        href="_sitehttps://github.com/Uniswap/merkle-distributor"
         underline="none"
       >
         Uniswap
       </HyperLink>
       {" "}and ported to Solana by{WHITESPACE}
       <HyperLink
-        href="/metaplex_sitehttps://github.com/saber-hq/merkle-distributor"
+        href="_sitehttps://github.com/saber-hq/merkle-distributor"
         underline="none"
       >
         Saber
@@ -80,7 +80,7 @@ const About = () => {
 
   const create= (
     <Stack spacing={1}>
-      <Link to={`/metaplex_site/gumdrop/create`}>
+      <Link to={`/gumdrop/create`}>
         CREATION
       </Link>
 
@@ -122,7 +122,7 @@ const About = () => {
 
   const claim = (
     <Stack spacing={1}>
-      <Link to={`/metaplex_site/gumdrop/claim`}>
+      <Link to={`/gumdrop/claim`}>
         CLAIMS
       </Link>
 
@@ -137,7 +137,7 @@ const About = () => {
 
   const close = (
     <Stack spacing={1}>
-      <Link to={`/metaplex_site/gumdrop/close`}>
+      <Link to={`/gumdrop/close`}>
         CLOSING
       </Link>
 

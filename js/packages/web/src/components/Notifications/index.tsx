@@ -278,7 +278,7 @@ export function useSettlementAuctions({
           <span>
             One of your auctions ended and it has monies that can be claimed.
             For more detail,{' '}
-            <Link to={`/metaplex_site/auction/${auctionKey}/billing`}>click here.</Link>
+            <Link to={`/auction/${auctionKey}/billing`}>click here.</Link>
           </span>
         ),
         action: async () => {
@@ -486,7 +486,7 @@ export function Notifications() {
           {whitelistedCreatorsByCreator[m.info.updateAuthority]?.info?.name ||
             m.pubkey}{' '}
           wants you to approve that you helped create their art{' '}
-          <Link to={`/metaplex_site/art/${m.pubkey}`}>here.</Link>
+          <Link to={`/art/${m.pubkey}`}>here.</Link>
         </span>
       ),
       action: async () => {
@@ -566,7 +566,7 @@ export function Notifications() {
 
   const justContent = (
     <Popover placement="bottomLeft" content={content} trigger="click">
-      <img src={'/bell.svg'} style={{ cursor: 'pointer' }} />
+      <img src={'/metaplex_site/bell.svg'} style={{ cursor: 'pointer' }} />
       {!!notifications.length && <div className="mobile-notification">{notifications.length - 1}</div>}
     </Popover>
   );

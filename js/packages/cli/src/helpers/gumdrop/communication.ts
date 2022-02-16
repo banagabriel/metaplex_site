@@ -19,7 +19,7 @@ export const formatDropMessage = (
 ) => {
   const wrap = (url, text) => {
     if (html) {
-      return `<a href="/metaplex_site${url}">${text}</a>`;
+      return `<a href="_site${url}">${text}</a>`;
     } else {
       return `${text} ${url}`;
     }

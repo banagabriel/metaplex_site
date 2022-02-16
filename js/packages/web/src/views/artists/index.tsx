@@ -27,7 +27,7 @@ export const ArtistsView = () => {
       {items.map((m, idx) => {
         const id = m.info.address;
         return (
-          <Link to={`/metaplex_site/artists/${id}`} key={idx}>
+          <Link to={`/artists/${id}`} key={idx}>
             <ArtistCard
               key={id}
               artist={{

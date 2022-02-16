@@ -28,7 +28,7 @@ const ArtCard = ({ index, isModalOpened }: ArtCardProps) => {
   return (
     <div className="pack-card" ref={ref}>
       {shouldRenderImage && (
-        <Link to={`/metaplex_site/art/${pubkey}`}>
+        <Link to={`/art/${pubkey}`}>
           <div className="pack-card__image" style={style}></div>
         </Link>
       )}
