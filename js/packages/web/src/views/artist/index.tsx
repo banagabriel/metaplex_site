@@ -4,12 +4,20 @@ import { Link, useParams } from 'react-router-dom';
 import { ArtCard } from '../../components/ArtCard';
 import { CardLoader } from '../../components/MyLoader';
 import { useCreator, useCreatorArts } from '../../hooks';
+import Collections from '../../utils/collections/collections.json'
 
 export const ArtistView = () => {
   const { id } = useParams<{ id: string }>();
   const creator = useCreator(id);
   const artwork = useCreatorArts(id);
-
+  var name: any;
+  Collections.forEach(function (collection) {
+    if (creator?.info.address !== collection.creator) {
+      return
+    } else {
+      name = collection.collection
+    }
+  })
   const artworkGrid = (
     <div className="artwork-grid">
       {artwork.length > 0
@@ -34,18 +42,14 @@ export const ArtistView = () => {
   return (
     <>
       <Col>
-        <Divider />
         <Row
-          style={{ margin: '0 30px', textAlign: 'left', fontSize: '1.4rem' }}
+          style={{ margin: '30px 30px 0', textAlign: 'left', fontSize: '1.4rem' }}
         >
           <Col className="about-artist" span={24}>
             <h2>
               {/* <MetaAvatar creators={creator ? [creator] : []} size={100} /> */}
-              {creator?.info.name || creator?.info.address}
+              {name}
             </h2>
-            <br />
-            <div className="info-header">ABOUT THE CREATOR</div>
-            <div className="info-content">{creator?.info.description}</div>
             <br />
             <div className="info-header">Art Created</div>
             {artworkGrid}

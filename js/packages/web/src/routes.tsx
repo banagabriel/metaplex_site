@@ -56,8 +56,8 @@ export function Routes() {
               component={() => <ArtworksView />}
             />
             <Route exact path="/art/:id" component={() => <ArtView />} />
-            <Route exact path="/artists/:id" component={() => <ArtistView />} />
-            <Route exact path="/artists" component={() => <ArtistsView />} />
+            <Route exact path="/collection/:id" component={() => <ArtistView />} />
+            <Route exact path="/collections" component={() => <ArtistsView />} />
 
             <Route
               exact

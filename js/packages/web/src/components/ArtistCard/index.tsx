@@ -5,8 +5,16 @@ import { Artist } from '../../types';
 
 import { shortenAddress } from '@oyster/common';
 import { MetaAvatar } from '../MetaAvatar';
-
+import Collections from '../../utils/collections/collections.json'
 export const ArtistCard = ({ artist }: { artist: Artist }) => {
+  var name: any;
+  Collections.forEach(function (collection) {
+    if (artist.address !== collection.creator) {
+      return
+    } else {
+      name = collection.collection
+    }
+  })
   return (
     <Card
       hoverable={true}
@@ -21,7 +29,7 @@ export const ArtistCard = ({ artist }: { artist: Artist }) => {
       <>
         <MetaAvatar creators={[artist]} size={64} />
         <div className="artist-card-name artist-name-badge">
-          {artist.name || shortenAddress(artist.address || '')}
+          {name}
         </div>
         <div className="artist-card-description">{artist.about}</div>
       </>
